@@ -20,6 +20,15 @@ class UsersController < ApplicationController
 
   end
 
+  def login
+    user = User.find_by(username: params[:username])
+    if user && user.authenticate(params[:password])
+      render json: user
+    else
+      render json: {error: "Cannot find or authenticate user. Loseeeeeerrr"}
+    end
+  end
+
   private
 
   def users_params
