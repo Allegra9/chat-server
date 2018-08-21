@@ -24,9 +24,8 @@ class UsersController < ApplicationController
   end
 
   def get_current_user
-
-    if current_user
-      render json: { username: current_user.username, name: current_user.name, id: current_user.id }
+    if the_current_user
+      render json: the_current_user
     else
       render json: { error: 'no user'}
     end

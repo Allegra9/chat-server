@@ -1,12 +1,13 @@
 class ApplicationController < ActionController::API
 
+
   # def current_user
   #   if(params[:user_id])
   #     current_user = User.find(params[:user_id])
   #   end
   # end
 
-  def current_user#token
+  def the_current_user
     User.find(token_user_id)
   end
 

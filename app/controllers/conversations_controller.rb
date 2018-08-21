@@ -8,7 +8,7 @@ class ConversationsController < ApplicationController
   def create
     conversation = Conversation.new(conversation_params)
     if conversation.save
-      current_user.conversations << conversation
+      the_current_user.conversations << conversation
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         ConversationSerializer.new(conversation)
       ).serializable_hash
@@ -18,8 +18,8 @@ class ConversationsController < ApplicationController
   end
 
   def user_conversations
-    if(current_user)
-      render json: current_user.conversations
+    if(the_current_user)
+      render json: the_current_user.conversations
     end
   end
 
