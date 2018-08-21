@@ -64,6 +64,7 @@ GEM
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.0)
+    jwt (1.5.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -148,6 +149,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  jwt (~> 1.5, >= 1.5.4)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)

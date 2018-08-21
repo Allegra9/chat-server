@@ -8,24 +8,27 @@ class UsersController < ApplicationController
   def create
     user = User.create(username: params[:username], password: params[:password], name: params[:name])
     if user.valid?
-      # serialized_data = ActiveModelSerializers::Adapter::Json.new(
-      #   UserSerializer.new(user)
-      # ).serializable_hash
-      #
-      # head :ok
-      render json: user
+      render json: { token: issue_token({ id: user.id }) }
     else
-      render json: {error: "SOMETHING WENT WRONG CREATING USER"}
+      render json: {error: "Cannot create user"}
     end
-
   end
 
   def login
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
-      render json: user
+      render json: { token: issue_token({ id: user.id }) }
     else
-      render json: {error: "Cannot find or authenticate user. Loseeeeeerrr"}
+      render json: {error: "Cannot find or authenticate user"}
+    end
+  end
+
+  def get_current_user
+
+    if current_user
+      render json: { username: current_user.username, name: current_user.name, id: current_user.id }
+    else
+      render json: { error: 'no user'}
     end
   end
 
