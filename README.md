@@ -1,3 +1,14 @@
+This is a chat-app's backend. Run it with:
+```rails db:create```   to create 
+```rails db:migrate db:seed```  to migrate & seed the database.
+
+Then to run 
+```rails s```   => localhost:3000     (Ctrl + C to stop)
+
+then run the chat-client frontend.
+
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
