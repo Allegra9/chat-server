@@ -10,6 +10,10 @@ Then to run
 
 then run the chat-client frontend.
 
+Demo video: https://www.youtube.com/watch?v=O_Cx57jF2so&index=3&list=UUZage3esBsP8jJGdT1k2n5A
+
+Mod4 project built w @HugoSanchez @developerjigr
+
 
 # README
 
