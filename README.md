@@ -1,6 +1,8 @@
-"WeChat” Slack-inspired messaging app.
+## "WeChat” Slack-inspired messaging app
+
 Integrated ActionCable web socket for a realtime bi-directional communication channel between a client and a server. Implemented user authentication and authorisation using JSON Web Token (JWT). Used Material UI for styling.
 
+## How to run:
 This is a chat-app's backend. Run it with:
 ```rails db:create```   to create 
 ```rails db:migrate db:seed```  to migrate & seed the database.
@@ -8,12 +10,17 @@ This is a chat-app's backend. Run it with:
 Then to run 
 ```rails s```   => localhost:3000     (Ctrl + C to stop)
 
-then run the chat-client frontend.
+then run the chat-client frontend (see chat-client repo)
 
-Demo video: https://www.youtube.com/watch?v=O_Cx57jF2so&index=3&list=UUZage3esBsP8jJGdT1k2n5A
+## Demo video: 
+
+https://www.youtube.com/watch?v=O_Cx57jF2so&index=3&list=UUZage3esBsP8jJGdT1k2n5A
+
+## Team:
 
 Mod4 project built w @HugoSanchez @developerjigr
 
+*********************************************
 
 # README
 
