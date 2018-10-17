@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   resources :subscriptions, only: [:create]
 
   post "/login", to: 'users#login'
+  get '/current_user', to: 'users#get_current_user'
+  
   get "/:user_id/conversations", to: 'conversations#user_conversations'
   post "/:user_id/conversations", to: 'conversations#create'
-  get '/current_user', to: 'users#get_current_user'
 
   mount ActionCable.server => '/cable'
-
 
 end

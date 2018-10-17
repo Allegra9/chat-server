@@ -18,7 +18,7 @@ class ConversationsController < ApplicationController
   end
 
   def user_conversations
-    if(the_current_user)
+    if the_current_user
       render json: the_current_user.conversations
     end
   end
