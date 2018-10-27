@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if user.valid?
       render json: { token: issue_token({ id: user.id }) }
     else
-      render json: {error: "Cannot create user"}
+      render json: {error: "*Username already exists"}
     end
   end
 
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if user && user.authenticate(params[:password])
       render json: { token: issue_token({ id: user.id }) }
     else
-      render json: {error: "Cannot find or authenticate user"}
+      render json: {error: "*Could not find or authenticate user"}
     end
   end
 
